@@ -1,0 +1,15 @@
+CS86 — JS2
+Fall 2023
+Beam Sereeyothin
+Wongsapat.Sereeyothin@tufts.edu
+
+----- Notes -----
+Initially, I had written the code so that it supports subclasses of GameObject, for Rock,
+Paper, and Scissor because of the constraints of the assignment. However, when I was almost
+already done with the code, I realized how much better/concise I could code it and decided
+to go down that route and write a more concise version, making it much easier to read and
+making the code more optimized, since my game requires the switching of GameObject type.
+In the current script that is running, I simply use the variable "Type" to switch between.
+But in the old version, I had to remove and add a new subclass object.
+
+If you want to see the subclasses version, please see script-old.js

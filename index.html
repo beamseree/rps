@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/053e01357a.js"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="./img/rps.svg" alt="" class="logo">
+
+        <div class="controls-container">
+            <p class="sidebar-title">Controls</p>
+            <div class="button-group">
+                <button class="button-group-button" id="start"><i
+                        class="fa-solid fa-play"></i>Start</button>
+                <button class="button-group-button" id="stop"><i
+                        class="fa-solid fa-pause"></i>Stop</button>
+                <button class="button-group-button" id="reset"><i
+                        class="fa-solid fa-repeat"></i>Reset</button>
+            </div>
+            <p class="sidebar-subtitle">Speed</p>
+            <div class="slider-container">
+                <input type="range" min="0.25" max="10" value="1" class="slider"
+                    step="0.25" id="speedSlider">
+                <p id="speedValue" class="value">1</p>
+            </div>
+            <p class="sidebar-subtitle">Spawn Entities</p>
+            <div class="slider-container">
+                <input type="range" min="1" max="100" value="3" class="slider"
+                    step="1" id="numSlider">
+                <p id="numValue" class="value">1</p>
+            </div>
+        </div>
+
+        <div class="game-state-container">
+            <p class="sidebar-title">Game State</p>
+            <div class="game-state">
+                <div class="game-state-item">
+                    <img src="./img/rock.png" alt=""
+                        class="game-state-item-img">
+                    <p class="game-state-item-text" id="rock">0</p>
+                </div>
+                <div class="game-state-item">
+                    <img src="./img/paper.png" alt=""
+                        class="game-state-item-img">
+                    <p class="game-state-item-text" id="paper">0</p>
+                </div>
+                <div class="game-state-item">
+                    <img src="./img/scissors.png" alt=""
+                        class="game-state-item-img">
+                    <p class="game-state-item-text" id="scissors">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="selected-container">
+            <p class="sidebar-title">Selected Item</p>
+            <div class="selected-item" id="selected-item">
+                <img src="./img/rock.png" alt="" class="selected-item-img"
+                    id="selectedImg">
+                <div class="selected-item-data">
+                    <p class="selected-item-text bold" id="type">Rock</p>
+                    <p class="selected-item-text" id="path">Rock</p>
+                    <p class="selected-item-text" id="speed">Rock</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="canvas-container">
+        <canvas id="canvas" width="1000px" height="750px">
+
+        </canvas>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
